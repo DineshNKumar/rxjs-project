@@ -475,7 +475,7 @@ export class AppComponent implements OnInit {
     // ).subscribe(value => console.log(value));
 
     // of(1, 2, 3, 4, 5, 6, 7, 8, 9).pipe(skipWhile(value => value < 3)).subscribe(value => console.log(value));
-
+  
     // of(of(1, 2, 3), of(5, 6, 7)).pipe(switchMap(value => value)).subscribe(value => console.log(value));
 
     // of(of(1, 2, 3, 4)).pipe(throttle(value => value, {leading: false, trailing: true}), switchMap(value => value))
