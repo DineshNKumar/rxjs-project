@@ -6,20 +6,21 @@
 # This workflow will install Deno and run tests across stable and canary builds on Windows, Ubuntu and macOS.
 # For more information see: https://github.com/denoland/setup-deno
 
-name: Merge any release branch to uat
+name: Sync multiple branches
 on:
   push:
     branches:
-      - 'release/*'
+      - '*'
 jobs:
-  merge-branch:
+  sync-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge staging -> uat
+      - name: Merge development -> staging
         uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
-          target_branch: uat
+          from_branch: development
+          target_branch: staging
           github_token: ${{ github.token }}
