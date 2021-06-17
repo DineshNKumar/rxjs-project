@@ -17,9 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge staging -> feature
+      - name: Merge development -> staging
         uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
-          target_branch: feature
+          from_branch: master
+          target_branch: master-copy
           github_token: ${{ github.token }}
